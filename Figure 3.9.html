@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: #00ffff; /* Cyan/Aqua cho tiêu đề chính */
+  text-align: center;
+}
+.category-label {
+  color: #0000ff; /* Màu xanh đậm cho nhãn */
+  text-decoration: underline; /* Gạch chân cho nhãn */
+}
+.equation-text {
+  color: #800080; /* Màu tím cho phần phương trình */
+  font-style: italic;
+}
+.result-text {
+    color: #ffa500; /* Màu cam cho "Print result" */
+    font-style: italic;
+}
+.code-block {
+  font-family: "Courier New", monospace;
+  color: black; /* Đảm bảo màu chữ mặc định của code là đen */
+}
+.code-comment {
+  color: red; /* Màu đỏ cho comment */
+}
+</style>
+</head>
+<body>
+
+<h1>Text Formatting</h1>
+
+<p><span class="category-label">Chemical:</span> <span style="font-style: italic;">Axit Sunfuric: H<sub>2</sub>SO<sub>4</sub></span></p>
+<p><span class="category-label">Mathematic:</span> <span class="equation-text">Equation: ax<sup>2</sup> + bx + c = 0</span></p>
+<p><span class="category-label">Technical:</span> <span class="result-text">Print result:</span></p>
+
+<pre class="code-block">
+int num, res;
+<span class="code-comment">printf("----------TEST THE NUMBER IS EVEN OR ODD------------");</span>
+printf("\nEnter a number : ");
+scanf("%d", &num);
+res = num % 2;
+if (res == 0)
+    printf("The number is Even");
+else
+    printf("The number is Odd");
+</pre>
+
+</body>
+</html>
