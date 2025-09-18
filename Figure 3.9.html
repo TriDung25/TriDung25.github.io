@@ -1,54 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  font-family: Arial, sans-serif;
-}
-h1 {
-  color: #00ffff; /* Cyan/Aqua cho tiêu đề chính */
-  text-align: center;
-}
-.category-label {
-  color: #0000ff; /* Màu xanh đậm cho nhãn */
-  text-decoration: underline; /* Gạch chân cho nhãn */
-}
-.equation-text {
-  color: #800080; /* Màu tím cho phần phương trình */
-  font-style: italic;
-}
-.result-text {
-    color: #ffa500; /* Màu cam cho "Print result" */
-    font-style: italic;
-}
-.code-block {
-  font-family: "Courier New", monospace;
-  color: black; /* Đảm bảo màu chữ mặc định của code là đen */
-}
-.code-comment {
-  color: red; /* Màu đỏ cho comment */
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Text Formatting</title>
+  <style>
+    body {
+      background-color: #FFFFFF;
+      font-family: "Times New Roman", Times, serif;
+    }
+    h1 {
+      text-align: center;
+      color: #00FFFF; /* Cyan */
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .line {
+      font-size: 20px;
+      margin: 8px 0;
+    }
+    .blue-link {
+      color: #0000FF;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .italic {
+      font-style: italic;
+      color: #000000;
+    }
+    .magenta {
+      color: #FF00FF;
+    }
+    .orange {
+      color: #FF751A;
+    }
+    pre {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 15px;
+      line-height: 1.2;
+      margin-top: 10px;
+      white-space: pre;
+    }
+    /* Các từ có màu đỏ */
+    .red {
+      color: #FF0000;
+    }
+    /* Các từ có màu đen */
+    .black {
+      color: #000000;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Text Formatting</h1>
+  <h1>Text Formatting</h1>
 
-<p><span class="category-label">Chemical:</span> <span style="font-style: italic;">Axit Sunfuric: H<sub>2</sub>SO<sub>4</sub></span></p>
-<p><span class="category-label">Mathematic:</span> <span class="equation-text">Equation: ax<sup>2</sup> + bx + c = 0</span></p>
-<p><span class="category-label">Technical:</span> <span class="result-text">Print result:</span></p>
+  <div class="line">
+    <span class="blue-link">Chemical:</span>
+    <span class="italic"> Axit Sunfuric:</span>
+    <span class="magenta"> H<sub>2</sub>SO<sub>4</sub></span>
+  </div>
 
-<pre class="code-block">
-int num, res;
-<span class="code-comment">printf("----------TEST THE NUMBER IS EVEN OR ODD------------");</span>
-printf("\nEnter a number : ");
-scanf("%d", &num);
-res = num % 2;
-if (res == 0)
-    printf("The number is Even");
-else
-    printf("The number is Odd");
-</pre>
+  <div class="line">
+    <span class="blue-link">Mathematic:</span>
+    <span class="italic"> Equation:</span>
+    <span class="magenta"> ax<sup>2</sup> + bx + c = 0</span>
+  </div>
+
+  <div class="line">
+    <span class="blue-link">Technical:</span>
+    <span class="orange"> Print result:</span>
+  </div>
+
+  <pre>
+<span class="red">int</span> <span class="black">num</span>, <span class="black">res</span>;
+<span class="black">printf</span>(<span class="red">"------TEST THE NUMBER IS EVEN OR ODD--------"</span>)<span class="black">;</span>
+<span class="black">printf</span>(<span class="black">"\nEnter a number :"</span>)<span class="black">;</span>
+<span class="black">scanf</span>(<span class="red">"%d"</span>,<span class="black">&</span><span class="black">num</span>)<span class="black">;</span>
+<span class="black">res</span> <span class="black">=</span> <span class="black">num</span> <span class="black">%</span> <span class="black">2</span><span class="black">;</span>
+<span class="red">if</span> <span class="black">(</span><span class="black">res</span> <span class="black">==</span> <span class="black">0</span><span class="black">)</span>
+    <span class="black">printf</span>(<span class="black">"The number is Even"</span>)<span class="black">;</span>
+<span class="red">else</span>
+    <span class="black">printf</span>(<span class="black">"The number is Odd"</span>)<span class="black">;</span>
+  </pre>
 
 </body>
 </html>
