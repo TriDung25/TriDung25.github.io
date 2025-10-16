@@ -1,7 +1,43 @@
 from tkinter import *
+
 windon = Tk()
-windon.title('hello')
+windon.geometry("500x500")
+windon.title("Adding Something")
+total = 0
 
+def enter_num():
+    global total
+    try:
+        num = int(entry_number.get())
+        total += num
+        entry_answer.delete(0, END)
+        entry_answer.insert(0, str(total))
+        entry_number.delete(0, END) 
+    except:
+        entry_answer.delete(0, END)
+        entry_answer.insert(0, "Invalid")
 
+def clear_answer():
+    global total
+    total = 0
+    entry_answer.delete(0, END)
+
+label_number = Label(text="Enter a number")
+label_number.place(x=10, y=30, width=120, height=25)
+
+entry_number = Entry()
+entry_number.place(x=150, y=30, width=100, height=25)
+
+add_button = Button(text="Add", command=enter_num)
+add_button.place(x=260, y=30, width=80, height=25)
+
+label_answer = Label(text="Answer =")
+label_answer.place(x=10, y=80, width=120, height=25)
+
+entry_answer = Entry()
+entry_answer.place(x=150, y=80, width=100, height=25)
+
+clear_button = Button(text="Clear", command=clear_answer)
+clear_button.place(x=260, y=80, width=80, height=25)
 
 windon.mainloop()
