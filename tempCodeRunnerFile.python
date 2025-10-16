@@ -1,43 +1,7 @@
-from turtle import *
-windon = Screen()
-
-control = Turtle()
-control.speed(36)
-
-windon.setup(width=900, height=600)
-windon.bgcolor("lightgray")
-
-control.penup()
-control.goto(-200, -250) 
-control.pendown()
-
-for _ in range(2):
-    control.forward(400)
-    control.left(90)
-    control.forward(300)
-    control.left(90)
-
-control.penup()
-control.goto(-170, 20)
-control.pendown()
-
-for _ in range(4):
-    control.forward(40)
-    control.right(90)
-
-control.penup()
-control.goto(-150, -100)
-control.pendown()
-
-control.circle(30)
-control.right(90)
-control.forward(100)
-control.right(45)
-control.forward(90)
-control.backward(90)
-control.left(90)
-control.forward(90)
+from tkinter import *
+windon = Tk()
+windon.title('hello')
 
 
-control.hideturtle()
+
 windon.mainloop()
